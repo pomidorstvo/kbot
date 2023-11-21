@@ -66,4 +66,3 @@ push:
 	docker push ${REGISTRY}${APP}:${VERSION}-${GOARCH}
 clean:
 	rm -f kbot
-	docker rmi ${REGISTRY}${APP}:${VERSION}-*
