@@ -19,8 +19,9 @@ var (
 var appVersion string
 
 var kbotCmd = &cobra.Command{
-	Use:   "kbot",
-	Short: "A brief description of your command",
+	Use:     "kbot",
+	Aliases: []string{"start"},
+	Short:   "A brief description of your command",
 	Long: `A longer description that spans multiple lines and likely contains examples
 	and usage of using your command. For example: `,
 
@@ -40,7 +41,7 @@ var kbotCmd = &cobra.Command{
 
 		kbot.Handle(telebot.OnText, func(m telebot.Context) error {
 
-	      //log.Print(m.Message().Payload, m.Text())
+			//log.Print(m.Message().Payload, m.Text())
 			log.Printf("Payload %s , Text: %s", m.Message().Payload, m.Text())
 			payload := m.Text()
 
