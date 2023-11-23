@@ -1,7 +1,6 @@
 APP=kbot
 REGISTRY=europe-central2-docker.pkg.dev/compact-marker-403817/mi-repo/
 VERSION := $(shell git describe --tags --abbrev=0)-$(shell git rev-parse --short HEAD)
-GOARCH := $
 TARGETOS=linux
 TARGETARCH=amd64
 
