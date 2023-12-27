@@ -7,7 +7,7 @@ jobs:
     name: CI
     runs-on: ubuntu-latest
 
-    step:
+    steps:
       - name: Checkout
         users: actions/checkout@v2
 
