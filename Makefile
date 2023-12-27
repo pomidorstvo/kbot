@@ -5,6 +5,7 @@ TARGETOS=linux
 TARGETARCH=amd64
 
 
+
 arm:    armrun armbuild armpush armclean
 armrun:
 	CGO_ENABLED=0 GOOS=linux GOARCH=arm go build -v -o kbot -ldflags "-X 'git@github.com:pomidorstvo/kbot/cmd.appVersion=${VERSION}'" 
