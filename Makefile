@@ -1,5 +1,5 @@
 APP=kbot
-REGISTRY=europe-central2-docker.pkg.dev/compact-marker-403817/mi-repo/
+REGISTRY=hub.docker.com/repository/docker/pomidorstvo/kbot
 VERSION := $(shell git describe --tags --abbrev=0)-$(shell git rev-parse --short HEAD)
 TARGETOS=linux
 TARGETARCH=amd64
