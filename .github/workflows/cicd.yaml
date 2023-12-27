@@ -1,7 +1,5 @@
 name: KBOT-CICD
-
 on: push
-
 jobs:
   ci:
     name: CI
