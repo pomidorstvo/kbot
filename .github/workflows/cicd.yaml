@@ -23,12 +23,14 @@ jobs:
           APP: "kbot"
           REGESTRY: ${{ secrets.DOCKERHUB_USERNAME }}
         run: make image push
+
   cd:
     name: CD
     needs: ci
     runs-on: ubuntu-latest
 
     steps:
+    
     - uses: actions/checkout@v3
       with:
         fetch-depth: 0
