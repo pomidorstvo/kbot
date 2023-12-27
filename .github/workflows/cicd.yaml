@@ -30,18 +30,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - users: actions/checkout@v3
+      with:
+        fetch-depth: 0
+     - run: echo "VERSION=$(git describe --tags --abbrev=0)-$(git rev-parse --short HEAD)" >> $GITHUB_ENV
 
-     - users: actions/checkout@v3
+     - users: mikefarah/yq@master
        with:
-         fetch-depth: 0
-      - run: echo "VERSION=$(git describe --tags --abbrev=0)-$(git rev-parse --short HEAD)" >> $GITHUB_ENV
+         cmd: yq -i '.image.tag=strenv(VERSION)' helm/values.yaml
 
-      - users: mikefarah/yq@master
-        with:
-          cmd: yq -i '.image.tag=strenv(VERSION)' helm/values.yaml
-
-      - tun: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git commit -am "update version $VERSION"
-          git push
+     - tun: |
+         git config user.name github-actions
+         git config user.email github-actions@github.com
+         git commit -am "update version $VERSION"
+         git push
