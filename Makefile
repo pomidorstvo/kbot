@@ -1,5 +1,5 @@
 APP=kbot
-REGISTRY=ghcr.io/pomidorstvo/kbot/
+REGISTRY=ghcr.io/pomidorstvo/
 VERSION := $(shell git describe --tags --abbrev=0)-$(shell git rev-parse --short HEAD)
 TARGETOS=linux
 TARGETARCH=amd64
