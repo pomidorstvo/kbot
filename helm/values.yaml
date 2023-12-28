@@ -5,7 +5,7 @@
 replicaCount: 1
 image:
   repository: ghcr.io/pomidorstvo
-  tag: "v0.0.1-5960d0c"
+  tag: "v0.0.1-648c382"
   arch: amd64
 secret:
   name: kbot
