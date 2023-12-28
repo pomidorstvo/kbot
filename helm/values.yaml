@@ -5,7 +5,7 @@
 replicaCount: 1
 image:
   repository: pomidorstvo
-  tag: "v0.0.1-785c3ec"
+  tag: "v0.0.1-e2fbfbc"
   arch: amd64
 secret:
   name: kbot
