@@ -7,6 +7,7 @@ image:
   regestry "ghcr.io/"
   repository: "pomidorstvo/kbot"
   tag: "v0.0.1-648c382"
+  os: linux
   arch: amd64
 secret:
   name: kbot
